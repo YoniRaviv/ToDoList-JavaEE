@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="model.TdlTask" table="TODOLIST">
+		<id name="id" type="int" column="ID" >
+			<generator class="increment"/>
+		</id>
+		<property name="taskTitle">
+			<column name="TASKTITLE"/>
+		</property>
+		<property name="taskDescription">
+			<column name="TASKDESCRIPTION"/>
+		</property>
+		<property name="userEmail">
+			<column name="USEREMAIL"/>
+		</property>
+	</class>
+
+	<class name="model.Users" table="USERS">
+		<id name="id" type="int" column="ID" >
+			<generator class="increment"/>
+		</id>
+		<property name="email">
+			<column name="EMAIL"/>
+		</property>
+		<property name="password">
+			<column name="PASSWORD"/>
+		</property>
+		<property name="name">
+			<column name="NAME"/>
+		</property>
+	</class>
+</hibernate-mapping>
